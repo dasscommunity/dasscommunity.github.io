@@ -1,57 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duck Ass Token</title>
-    <style>
-        body {
-            font-family: Comic Sans MS, Comic Sans;
-            margin: 0;
-            padding: 0;
-            background-color: #fff200; /* Yellow background */
-            color: #000; /* Black text */
-        }
-        header {
-            background-color: #000; /* Black background */
-            color: #fff200; /* Yellow text */
-            padding: 15px;
-            text-align: center;
-        }
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #000; /* Black text */
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #000; /* Black background */
-            color: #fff200; /* Yellow text */
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+<title>Duck Ass Token</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Sans+MS">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Comic Sans MS", sans-serif;}
+body, html {
+  height: 100%;
+  background-color: yellow;
+  color: black;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-color: yellow;
+  min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Clap dat duck ass</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-    </nav>
-    <main>
-        <h2>About Duck Ass Token</h2>
-        <p>Hi srs investor. Welcome to the Duck Ass Token website. This is a token made for enjoyers of this duck who loves to shake his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon.</p>
-    </main>
-    <img src="ducktwerk.jpg" alt="A duck shaking its ass">
-</body>
-</html>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#home" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">DUCK <span class="w3-hide-small">ASS</span> TOKEN</span>
+  </div>
+</div>
+
+<!-- Container (Main Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">WELCOME</h3>
+  <p class="w3-center"><em>Hi srs investor. Welcome to the Duck Ass Token website. This is a token made for enjoyers of this duck who loves to shake his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon</em></p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class=
