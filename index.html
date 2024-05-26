@@ -47,14 +47,14 @@ body, html {
   border-radius: 5px;
   display: inline-block;
   margin: 0 auto;
-  text-align: right;
+  text-align: centre;
 }
 
 .footer-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
-  font-size: 3em; /* Enlarged font size for mobile */
+  font-size: 1.5em; /* Enlarged font size for mobile */
 }
 
 /* Animation for spinning and moving GIFs */
@@ -95,25 +95,6 @@ body, html {
 <!-- Play Overlay -->
 <div id="play-overlay" class="play-overlay" onclick="startAudio()">
   <h1>Click to Play</h1>
-</div>
-
-<!-- Audio autoplay -->
-<audio id="background-music">
-  <source src="ducktwerk.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-  </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
