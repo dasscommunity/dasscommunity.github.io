@@ -71,12 +71,36 @@ body, html {
   height: 50px;
   animation: spin 10s linear infinite;
 }
+
+.play-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.play-overlay.hidden {
+  display: none;
+}
 </style>
 </head>
 <body>
 
+<!-- Play Overlay -->
+<div id="play-overlay" class="play-overlay" onclick="startAudio()">
+  <h1>Click to Play</h1>
+</div>
+
 <!-- Audio autoplay -->
-<audio id="background-music" autoplay>
+<audio id="background-music">
   <source src="ducktwerk.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
@@ -117,11 +141,6 @@ body, html {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  var audio = document.getElementById('background-music');
-  audio.play().catch(function(error) {
-    console.log('Autoplay was prevented: ', error);
-  });
-
   var gifs = ['ducktwerk.gif', 'ducktwerk2.gif'];
   for (var i = 0; i < 50; i++) {
     var img = document.createElement('img');
@@ -133,6 +152,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(img);
   }
 });
+
+function startAudio() {
+  var audio = document.getElementById('background-music');
+  audio.play().then(function() {
+    document.getElementById('play-overlay').classList.add('hidden');
+  }).catch(function(error) {
+    console.log('Autoplay was prevented: ', error);
+  });
+}
 </script>
 
 </body>
