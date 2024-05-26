@@ -15,7 +15,6 @@ body, html {
   color: black;
   line-height: 1.8;
   margin: 0;
-  overflow: hidden; /* Prevent scroll bars */
 }
 
 .bgimg-1 {
@@ -31,7 +30,7 @@ body, html {
 
 .title {
   font-family: "Comic Sans MS", sans-serif;
-  font-size: 4em; /* Enlarged font size */
+  font-size: 6em; /* Enlarged font size */
   color: #00FF00;
   background-color: purple;
   padding: 10px;
@@ -41,30 +40,21 @@ body, html {
 
 .welcome {
   font-family: "Comic Sans MS", sans-serif;
-  font-size: 2.5em; /* Centered and larger font size */
+  font-size: 3em; /* Centered and larger font size */
   color: #00FF00;
   background-color: purple;
   padding: 10px;
   border-radius: 5px;
   display: inline-block;
   margin: 0 auto;
-  text-align: center;
+  text-align: right;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-
-  .title {
-    font-size: 3em;
-  }
-
-  .welcome {
-    font-size: 2em;
-  }
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 3em; /* Enlarged font size for mobile */
 }
 
 /* Animation for spinning and moving GIFs */
@@ -97,12 +87,6 @@ body, html {
 
 .play-overlay.hidden {
   display: none;
-}
-
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 </style>
 </head>
