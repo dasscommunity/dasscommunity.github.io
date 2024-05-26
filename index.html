@@ -15,6 +15,7 @@ body, html {
   color: black;
   line-height: 1.8;
   margin: 0;
+  overflow: hidden; /* Prevent scroll bars */
 }
 
 .bgimg-1 {
@@ -57,6 +58,19 @@ body, html {
     font-size: 1.5em;
   }
 }
+
+/* Animation for spinning and moving GIFs */
+@keyframes spin {
+  0% { transform: rotate(0deg) translateX(0); }
+  100% { transform: rotate(360deg) translateX(100vw); }
+}
+
+.gif {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: spin 10s linear infinite;
+}
 </style>
 </head>
 <body>
@@ -91,10 +105,6 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center welcome">WELCOME</h3>
   <p class="w3-center"><em>Hi duck cheek clapping enthusiast. Welcome to the Duck Ass Token website. This is a token made for enjoyers of this duck who loves to wiggle his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon!</em></p>
-  <div class="w3-center">
-    <img src="ducktwerk.gif" alt="Duck Twerk" style="width:45%;max-width:400px;">
-    <img src="ducktwerk2.gif" alt="Okay Egg Yatt" style="width:45%;max-width:400px;">
-  </div>
 </div>
 
 <!-- Footer -->
@@ -104,6 +114,26 @@ body, html {
     <a href="https://t.me/dasscommunity" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('background-music');
+  audio.play().catch(function(error) {
+    console.log('Autoplay was prevented: ', error);
+  });
+
+  var gifs = ['ducktwerk.gif', 'ducktwerk2.gif'];
+  for (var i = 0; i < 50; i++) {
+    var img = document.createElement('img');
+    img.src = gifs[i % gifs.length];
+    img.className = 'gif';
+    img.style.top = Math.random() * 100 + 'vh';
+    img.style.left = Math.random() * 100 + 'vw';
+    img.style.animationDuration = (10 + Math.random() * 20) + 's';
+    document.body.appendChild(img);
+  }
+});
+</script>
 
 </body>
 </html>
