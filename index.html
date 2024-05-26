@@ -42,4 +42,68 @@ body, html {
   font-size: 2em;
 }
 
-/* 
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+
+  .title, .welcome {
+    font-size: 2em;
+  }
+
+  .welcome {
+    font-size: 1.5em;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Audio autoplay -->
+<audio id="background-music" autoplay>
+  <source src="ducktwerk.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity title">DUCK <span class="w3-hide-small">ASS</span> TOKEN</span>
+  </div>
+</div>
+
+<!-- Container (Main Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center welcome">WELCOME</h3>
+  <p class="w3-center"><em>Hi duck cheek clapping enthusiast. Welcome to the Duck Ass Token website. This is a token made for enjoyers of this duck who loves to wiggle his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon!</em></p>
+  <div class="w3-center">
+    <img src="ducktwerk.JPG" alt="Duck Twerk" style="width:45%;max-width:400px;">
+    <img src="ducktwerk2.JPG" alt="Okay Egg Yatt" style="width:45%;max-width:400px;">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <div class="w3-xlarge w3-section">
+    <a href="https://x.com/Clapdatdass" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+    <a href="https://t.me/dasscommunity" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
