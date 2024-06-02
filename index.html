@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Duck Ass Token</title>
+<title>Grug on Base</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,8 +11,8 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Comic Sans MS", sans-serif;}
 body, html {
   height: 100%;
-  background-color: yellow;
-  color: black;
+  background-color: black;
+  color: orange;
   line-height: 1.8;
   margin: 0;
   overflow: hidden; /* Prevent scroll bars */
@@ -32,8 +32,8 @@ body, html {
 .title, .welcome {
   font-family: "Comic Sans MS", sans-serif;
   font-size: 3em;
-  color: #00FF00;
-  background-color: purple;
+  color: orange;
+  background-color: black;
   padding: 10px;
   border-radius: 5px;
   display: inline-block;
@@ -59,17 +59,14 @@ body, html {
   }
 }
 
+.caveman-font {
+  font-family: "Papyrus", "Comic Sans MS", sans-serif; /* Adjust as needed for a caveman look */
+}
+
 /* Animation for spinning and moving GIFs */
 @keyframes spin {
   0% { transform: rotate(0deg) translateX(0); }
   100% { transform: rotate(360deg) translateX(100vw); }
-}
-
-.gif {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  animation: spin 10s linear infinite;
 }
 
 .play-overlay {
@@ -94,17 +91,6 @@ body, html {
 </head>
 <body>
 
-<!-- Play Overlay -->
-<div id="play-overlay" class="play-overlay" onclick="startAudio()">
-  <h1>Click to Play</h1>
-</div>
-
-<!-- Audio autoplay -->
-<audio id="background-music">
-  <source src="ducktwerk.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
@@ -121,14 +107,17 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity title">DUCK <span class="w3-hide-small">ASS</span> TOKEN</span>
+    <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity title caveman-font">GRUG ON BASE</span>
   </div>
 </div>
 
 <!-- Container (Main Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center welcome">WELCOME</h3>
-  <p class="w3-center"><em>Hi duck cheek clapping enthusiast. Welcome to the Duck Ass Token website. This is a token made for enjoyers of this duck who loves to wiggle his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon!</em></p>
+  <h3 class="w3-center welcome caveman-font">WELCOME</h3>
+  <p class="w3-center caveman-font"><em>Hi duck cheek clapping enthusiast. Welcome to the Grug on Base website. This is a token made for enjoyers of this duck who loves to wiggle his ass. We hope it inspires you to save a single mother from a burning apartment building. Pls follow us on X our official handle is @clapdatdass. Token launch coming soon!</em></p>
+  <div class="w3-center">
+    <img src="grugonbase.jpg" alt="Grug on Base">
+  </div>
 </div>
 
 <!-- Footer -->
@@ -138,30 +127,6 @@ body, html {
     <a href="https://t.me/dasscommunity" target="_blank"><i class="fa fa-telegram w3-hover-opacity"></i></a>
   </div>
 </footer>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  var gifs = ['ducktwerk.gif', 'ducktwerk2.gif'];
-  for (var i = 0; i < 50; i++) {
-    var img = document.createElement('img');
-    img.src = gifs[i % gifs.length];
-    img.className = 'gif';
-    img.style.top = Math.random() * 100 + 'vh';
-    img.style.left = Math.random() * 100 + 'vw';
-    img.style.animationDuration = (10 + Math.random() * 20) + 's';
-    document.body.appendChild(img);
-  }
-});
-
-function startAudio() {
-  var audio = document.getElementById('background-music');
-  audio.play().then(function() {
-    document.getElementById('play-overlay').classList.add('hidden');
-  }).catch(function(error) {
-    console.log('Autoplay was prevented: ', error);
-  });
-}
-</script>
 
 </body>
 </html>
